@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary-color: #9694b0;
+$secondary-color: #0e0e11;
+$tertiary-color: #f3f1f1;
+
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: $primary-color;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator{
+  height: 400px;
+  width: 300px;
+  margin: 20vh 30vw 40vh 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $secondary-color;
+  border: 10px solid $secondary-color;
+  border-radius: 5px; 
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#display *{
+  color: $tertiary-color;
+  font-size: 1.5rem;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, 60px);
+}
+
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#equals {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+button{
+  cursor: pointer;
+}
+
+
+
